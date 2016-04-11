@@ -65,11 +65,11 @@ void mov(int dist, int dir) {
 void turn(int angle, int dir) {
     int steps = (len2 * 1.0) / (len * 1.0) * (angle / 360.0) * 200;
     if (dir == R) {
-        digitalWrite(directionPin, LOW);
-        digitalWrite(directionPin2, LOW);
-    } else if (dir == L) {
         digitalWrite(directionPin, HIGH);
         digitalWrite(directionPin2, HIGH);
+    } else if (dir == L) {
+        digitalWrite(directionPin, LOW);
+        digitalWrite(directionPin2, LOW);
     }
     for (int i = 0; i < steps; i++) {
         digitalWrite(stepPin, HIGH);
