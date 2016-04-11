@@ -15,7 +15,7 @@ const int B = 3;
 const int rad = 30; //radius of the wheel (mm)
 const int len = 2 * M_PI * rad;
 
-const int dia2 = 238; //dist between two steppers. Big - 238
+const int dia2 = 237.5; //dist between two steppers. Big - 237.5
 const int len2 = M_PI * dia2;
  
 // Выдержка для регулировки скорости вращения
