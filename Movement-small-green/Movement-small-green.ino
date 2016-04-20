@@ -18,10 +18,10 @@ const byte directionPin2 = 9;
 const int dia = 60;  // Radius of the wheel (mm)
 const int len = M_PI * dia;
 
-const int dia2 = 166; // Distance between two wheels (mm)
+const int dia2 = 175; // Distance between two wheels (mm)
 const int len2 = M_PI * dia2;
  
-int delayTime = 2; // Delay between each step (ms)
+int delayTime = 4; // Delay between each step (ms)
 
 
 void setup() {
@@ -31,15 +31,23 @@ void setup() {
     pinMode(directionPin2, OUTPUT);
     
     Serial.begin(9600);
+    mov(2, B);
+    delay(4000);
     
-    mov(165, F);
+    mov(335, F);
+    turn(90, L);
+    mov(205, F);
     turn(90, R);
-    mov(535, F);
-    turn(45, L);
-    mov(145, F);  // Closed first flag
-    mov(50, B);
-    turn(33, L);
-    mov(280, F);
+    mov(850, F);  // Castle
+    mov(580, B);
+    
+    turn(90, R);
+    mov(780, F);  // First flag
+    mov(250, B);
+    turn(90, R);
+    mov(270, F);
+    turn(90, L);
+    mov(260, F);  // Second flag
 }
 
 void loop() {
