@@ -42,12 +42,12 @@ void setup() {
     mov(580, B);
     
     turn(90, R);
-    mov(780, F);  // First flag
+    mov(785, F);  // First flag
     mov(250, B);
     turn(90, R);
     mov(270, F);
     turn(90, L);
-    mov(260, F);  // Second flag
+    mov(275, F);  // Second flag
 }
 
 void loop() {
